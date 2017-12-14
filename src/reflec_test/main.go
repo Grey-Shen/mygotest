@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"reflect"
 )
 
@@ -10,12 +11,12 @@ type TestHandler interface {
 }
 
 type Ball struct {
-	color string `species:"gopher" color:"blue"`
-	count int
+	Color string `species:"gopher" color:"blue"`
+	Count int
 }
 
 func (b *Ball) printinfo() {
-	fmt.Println(b.color, b.color)
+	fmt.Println(b.Color, b.Color)
 }
 
 type TaskInfo struct {
@@ -28,14 +29,15 @@ func (t *TaskInfo) printinfo() {
 }
 
 func (ball Ball) getColor() string {
-	return ball.color
+	return ball.Color
 }
 
 func main() {
 
-	basket := Ball{color: "shend", count: 25}
+	basket := Ball{Color: "shend", Count: 25}
 	st := reflect.TypeOf(basket)
 	algin := st.Align()
+	fmt.Printf("========= aligin: %d\n", algin)
 	fmt.Println("NumMethod", st.NumMethod())
 	fmt.Println("NumField", st.NumField())
 	ss, exists := st.FieldByName("color")
@@ -51,6 +53,18 @@ func main() {
 
 	interfacetest(&basket)
 	interfacetest(&task)
+
+	var bt = Ball{}
+
+	SetData(bt)
+	SetData2(&bt)
+
+	fmt.Printf("Bt is %v\n", bt)
+
+	type myfloat float64
+	var x myfloat = 3.4
+	fmt.Println("type: ", reflect.TypeOf(x), reflect.ValueOf(x).Kind())
+	fmt.Println("value:", reflect.ValueOf(x).String())
 }
 
 func interfacetest(b TestHandler) {
@@ -59,8 +73,35 @@ func interfacetest(b TestHandler) {
 	b.printinfo()
 }
 
-// func FindColor(i interface{}) {
-// 	st := reflect.TypeOf(i)
-// 	s, b := st.FieldByName("TaskId")
+func SetData(data interface{}) {
+	fmt.Println("=========== SetData")
+	basket := Ball{Color: "red", Count: 25}
+	v := reflect.ValueOf(data).Elem()
+	if !v.CanAddr() {
+		fmt.Println("========= cannot addr")
+		return
+	}
+	if !v.CanSet() {
+		log.Println("Can not set")
+		return
+	}
 
-// }
+	v.Elem().Set(reflect.ValueOf(&basket).Elem())
+}
+
+func SetData2(data interface{}) {
+	fmt.Println("=========== SetData2")
+	basket := Ball{Color: "red", Count: 25}
+	tmp := data.(*Ball)
+	v := reflect.ValueOf(tmp.Color)
+	if !v.CanAddr() {
+		fmt.Println("========= cannot addr")
+		return
+	}
+	if !v.CanSet() {
+		log.Println("Can not set")
+		return
+	}
+
+	v.Elem().Set(reflect.ValueOf(&basket).Elem())
+}

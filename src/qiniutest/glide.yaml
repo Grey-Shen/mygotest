@@ -1,8 +1,0 @@
-package: .
-import:
-- package: gopkg.in/yaml.v2
-- package: qiniupkg.com/api.v7
-  version: v7.0.5
-  subpackages:
-  - conf
-  - kodo

@@ -1,9 +1,0 @@
-package: gitlab.qiniu.io/pingan/libserver
-import:
-- package: github.com/labstack/gommon
-  version: ^0.2.2
-  subpackages:
-  - color
-- package: github.com/mattn/go-isatty
-  version: ^0.0.2
-- package: github.com/onsi/gocleanup

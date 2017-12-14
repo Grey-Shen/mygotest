@@ -1,0 +1,8 @@
+release:
+  portal_private_key: |
+                      -----BEGIN RSA PRIVATE KEY-----
+                      MGMCAQACEQC7S8j3uT+BaffL5PIwAsOjAgMBAAECEQCzDFjbkKlIEZwe29FgbVvB
+                      AgkA79iiMkyNjMMCCQDH6Rg+pK3/oQIIDalkS8MqiOsCCGmpMw5RHkJhAgkAyYWC
+                      OmawFzU=
+                      -----END RSA PRIVATE KEY-----
+                      

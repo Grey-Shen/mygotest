@@ -1,0 +1,76 @@
+
+db.bizdata_test.insert(
+{
+    "doc_id" : "UDMP-749491754f2ecd00a950ad8afd0bea8d81e0de20f4-97dcfa02-20170419062841-00000002",
+    "app_id" : "97dcfa02",
+    "title" : "",
+    "pages" : [
+        {
+            "key" : "UDMP-749491754f2ecd00a950ad8afd0bea8d81e0de20f4-97dcfa02-20170419062841-00000002/1",
+            "bizdata" : {
+                "aa": 1,
+                "bb": true
+
+            },
+            "page_no" : 1
+        },
+        {
+            "key" : "UDMP-749491754f2ecd00a950ad8afd0bea8d81e0de20f4-97dcfa02-20170419062841-00000002/2",
+            "bizdata" : {
+                "cc": "haha"
+            },
+            "page_no" : 2
+        }
+    ],
+    "bizdata" : {
+
+    },
+    "operator" : {
+        "created_by" : "operator",
+        "created_at" : ISODate("2017-04-19T06:28:41.403Z"),
+        "created_by_app" : "97dcfa02",
+        "updated_by" : "operator",
+        "updated_at" : ISODate("2017-04-19T06:28:41.403Z"),
+        "updated_by_app" : "97dcfa02"
+    }
+})
+db.bizdata_test.insert(
+{
+    "doc_id" : "UDMP-3cedd305cba4634b06beab440b9b2fa4bae15d63c3-97dcfa02-20170419062838-00000002",
+    "app_id" : "97dcfa02",
+    "title" : "",
+    "pages" : [
+        {
+            "key" : "UDMP-3cedd305cba4634b06beab440b9b2fa4bae15d63c3-97dcfa02-20170419062838-00000002/1",
+            "bizdata" : {
+
+            },
+            "page_no" : 1
+        },
+        {
+            "key" : "UDMP-3cedd305cba4634b06beab440b9b2fa4bae15d63c3-97dcfa02-20170419062838-00000002/2",
+            "bizdata" : {
+
+            },
+            "page_no" : 2
+        }
+    ],
+    "bizdata" : {
+
+    },
+    "operator" : {
+        "created_by" : "name of the operator",
+        "created_at" : ISODate("2017-04-19T06:28:38.896Z"),
+        "created_by_app" : "97dcfa02",
+        "updated_by" : "name of the operator",
+        "updated_at" : ISODate("2017-04-19T06:28:38.896Z"),
+        "updated_by_app" : "97dcfa02"
+    }
+})
+
+db.document_bizdata_schema.insert({
+    "_id": "haha",
+    "type": "float",
+    "status": "enabled",
+    "scope": ["document","page"]
+})

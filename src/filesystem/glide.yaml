@@ -1,3 +1,0 @@
-package: filesystem
-import:
-- package: github.com/gin-gonic/gin

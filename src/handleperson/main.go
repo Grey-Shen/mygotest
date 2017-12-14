@@ -55,3 +55,5 @@ func feathPerson(origs chan<- Person) {
 func savePerson(dest <-chan Person) <-chan byte {
 
 }
+
+interface{}

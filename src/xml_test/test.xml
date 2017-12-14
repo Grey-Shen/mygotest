@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CentAuthroty>
+<TransportFilesCount>1</TransportFilesCount>
+<status>0</status>
+<TransferList>
+    <Transfer>
+        <TX_LOG_NO>log_no_1</TX_LOG_NO>
+        <TX_DATE1>date1</TX_DATE1>
+        <CUST_ID>1</CUST_ID>
+        <MACHINE_BRANCH>machine_branch_1</MACHINE_BRANCH>
+        <MACHINE_TELLER>machine_teller1</MACHINE_TELLER>
+        <TX_TYPE>1</TX_TYPE>
+        <FileNames>
+            <FileName>11.jpg</FileName>
+            <FileName>12.jpg</FileName>
+            <FileName>13.jpg</FileName>
+        </FileNames>
+    </Transfer>
+    <Transfer>
+        <TX_LOG_NO>log_no_2</TX_LOG_NO>
+        <TX_DATE1>date2</TX_DATE1>
+        <CUST_ID>2</CUST_ID>
+        <MACHINE_BRANCH>machine_branch_2</MACHINE_BRANCH>
+        <MACHINE_TELLER>machine_teller2</MACHINE_TELLER>
+        <TX_TYPE>2</TX_TYPE>
+        <FileNames>
+            <FileName>21.jpg</FileName>
+            <FileName>22.jpg</FileName>
+            <FileName>23.jpg</FileName>
+        </FileNames>
+    </Transfer>
+</TransferList>
+</CentAuthroty>

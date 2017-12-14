@@ -1,0 +1,2 @@
+export LD_LIBRARY_PATH=/Users/chenyajun/Documents/goproject/src/oracle/instantclient_12_2
+export PKG_CONFIG_PATH=/Users/chenyajun/Documents/goproject/src/oracle/instantclient_12_2

@@ -1,4 +1,0 @@
-package: http_server
-import:
-- package: github.com/gin-gonic/gin
-  version: v1.2

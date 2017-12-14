@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service version="2.0">
+	<SYS_HEAD>
+		<CONSUMER_ID attr="s,6">011701</CONSUMER_ID>
+	</SYS_HEAD>
+	<BODY>
+        <RSP_CODE attr="s.32">05091</RSP_CODE>
+		<DEAL_MSG attr="s.200">请求成功</DEAL_MSG>
+        <FILE_PATH attr="s,512">fakePath</FILE_PATH> 
+		<FILE_NAME1 attr="s,512">fake1</FILE_NAME1>
+	</BODY>
+</service>

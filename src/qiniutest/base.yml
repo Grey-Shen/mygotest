@@ -1,0 +1,19 @@
+rs_host: http://rspub.pabosuat.sdb.com.cn
+rsf_host: http://rsf.pabosuat.sdb.com.cn
+io_host: http://io.pabosuat.sdb.com.cn
+api_host: http://apiserver.pabosuat.sdb.com.cn
+uc_host: http://uc.pabosuat.sdb.com.cn
+domain_host: http://one.pabosuat.sdb.com.cn
+up_hosts:
+    - http://up.pabosuat.sdb.com.cn
+url_lifetime: 3600
+uptoken_lifetime: 3600
+admin_username: udmp@pab.com.cn
+admin_password: 1234567890
+email_domain: udmpuat.sdb.com.cn
+bucket_domain: .bucket.pabosuat.sdb.com.cn
+bucket_name: udmp-storage
+access_key: C2QcWBwdgB5XIPgexk9LoAJp4uJoW0yaHywpqP0q
+secret_key: v-RAMVOIuLKBGCFemR1omfSAGlc8NgGxqTudEnPQ
+max_retry: 3
+

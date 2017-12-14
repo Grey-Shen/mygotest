@@ -1,0 +1,13 @@
+package: gitlab.qiniu.io/pingan/liblogger
+import:
+- package: github.com/sirupsen/logrus
+- package: gitlab.qiniu.io/pingan/libbase
+  vcs: git
+  repo: git@gitlab.qiniu.io:pingan/libbase.git
+  version: master
+- package: golang.org/x/crypto
+  vcs: git
+  repo: https://github.com/golang/crypto.git
+- package: golang.org/x/sys
+  vcs: git
+  repo: https://github.com/golang/sys.git

@@ -1,0 +1,22 @@
+package: gitlab.qiniu.io/pingan/libqiniu
+import:
+- package: gitlab.qiniu.io/pingan/libhttpclient
+  vcs: git
+  repo: git@gitlab.qiniu.io:pingan/libhttpclient.git
+testImport:
+- package: github.com/onsi/ginkgo
+  version: ^1.4.0
+- package: github.com/onsi/gomega
+  version: ^1.2.0
+- package: github.com/golang/mock
+- package: golang.org/x/sys
+  vcs: git
+  repo: https://github.com/golang/sys.git
+- package: golang.org/x/net
+  vcs: git
+  repo: https://github.com/golang/net.git
+- package: golang.org/x/text
+  vcs: git
+  repo: https://github.com/golang/text.git
+- package: gopkg.in/djherbis/buffer.v1
+- package: gopkg.in/djherbis/nio.v2

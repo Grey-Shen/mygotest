@@ -1,0 +1,8 @@
+hash: caad00c93d204a03aa04bc2faab5414cd3212b7eb82f07418f2e7474cb7ba11b
+updated: 2017-04-01T15:10:56.046862141+08:00
+imports:
+- name: gopkg.in/alexcesaro/quotedprintable.v3
+  version: 2caba252f4dc53eaf6b553000885530023f54623
+- name: gopkg.in/gomail.v2
+  version: 41f3572897373c5538c50a2402db15db079fa4fd
+testImports: []

@@ -1,0 +1,49 @@
+## async_tasks
+
+```
+{
+    "task_id":         ObjectId # 任务 Id
+    "task_type":       String   # 任务 type
+    "paramerter":      Key(sring) => Value(string) # 执行所需参数
+    "created_by_app":  String   # 创建者
+    "executed_by":     String   # 执行者
+    "doc_id":          String   # DocId
+    "page_no":         int      # page 页码
+    "sheduled_at":     Date     # 计划开始时间
+    "started_at":      Date     # 任务开始执行时间
+    "stoped_at":       Date     # 任务执行结束时间
+    "status":             String   # 任务状态
+    "details":         Key(string) => Value(string) # 执行结果信息
+}
+```
+
+## documents
+
+```
+{
+    "_id": ObjectId # Document 主键
+    "doc_id": String # DocId，要求必须存在，必须唯一，必须符合正则表达式 /^UDMP\-[0-9a-f]{42}\-[0-9a-f]{8}\-\d{14}\-[0-9a-f]{8}$/
+    "app_id": String # AppId，要求必须存在，必须符合正则表达式 /^[0-9a-f]{8}$/
+    "title": String # Document 标题
+    "bizdata": Key(string) => Value(string) # Document 业务信息
+    "operator": {
+        "created_by": String # Document 创建者，要求必须存在
+        "created_at": Date # Document 创建时间，要求必须存在
+        "created_by_app": String, # Document 创建者的 AppId，要求必须存在
+        "updated_by": String # Document 最后一次修改者，要求必须存在，如果还没有修改过，就填入创建者
+        "updated_at": Date # Document 最后一次修改时间，要求必须存在，如果还没有修改过，就填入创建时间
+        "updated_by_app": String, # Document 最后一次修改者的 AppId，要求必须存在，如果还没有修改过，就填入创建者的 AppId
+    },
+    "pages": [ # Page 内容，按页码顺序排列，要求必须存在，至少有一个元素
+        {
+            "key": String # Page 在云存储上的 Key，要求必须存在
+            "bizdata": Key(string) => Value(string) # Page 业务信息
+            "page_no": int # Page 页码，必须大于 0
+            "status": String # 当前状态，内容只能是 reserved
+        },
+        # More Pages ...
+    ],
+    "status": String # 当前状态，内容只能是 reserved 或者 failed
+    "decompression_failed_keys": Array[String] # 当解压错误时，存储解压出错的 Key
+}
+```
